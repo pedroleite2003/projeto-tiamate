@@ -13,6 +13,8 @@ module.exports = {
                 marrom_white_02: '#C7794A',
                 marrom_white_03: '#CF9A5A',
                 bright_color: '#FDF5E3',
+                amarelo: '#F7AE1A',
+
             }
         },
     },
