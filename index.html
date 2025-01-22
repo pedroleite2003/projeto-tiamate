@@ -150,9 +150,307 @@
             <div class="w-full h-[200px] bg-marrom_white_01 absolute bottom-0 left-0 -z-10"></div>
         </section>
         <section id="cardapio" class="h-screen bg-marrom_white_01">
-            
+            <div>
+                <p class="text-[18px] text-marrom_black_02 mx-[664px]">Confira nosso</p>
+                <h2 class="text-[50px] text-marrom_medium_01 mx-[610px] font-bold">Cardápio</h2>
+            </div>
+            <div class="flex gap-[20px] items-center mt-[77px]">
+                <img src="IMG_inicio/ceta_esqueda.png" alt="" class="ml-[300px] w-[29px] h-[24px]">
+                <img src="IMG_inicio/Bebidas_1.png" alt="" class="ml-[55px]">
+                <img src="IMG_inicio/Bebidas_2.png" alt="" class="">
+                <img src="IMG_inicio/Bebidas_3.png" alt="" class="">
+                <img src="IMG_inicio/cet_direita.png" alt="" class="">
+            </div>
+            <div class="justify-center items-center ml-[560px] mt-[72px]">
+                <button class="w-[304px] h-[60px] bg-marrom_white_03 font-bold rounded-[5px]">Ver
+                    mais</button>
+            </div>
         </section>
+        <section id="contato" class="flex">
+            <div class="flex-1 bg-marrom_black_02 p-4 md:pl-[135px] md:pt-[70px] md:pr-[70px]">
+                <h6 class="text-marrom_white_03 text-[18px]">Entre em contato</h6>
+                <h2 class="text-marrom_white_01 text-[50px] font-bold mb-[20px]">Abra sua Franquia</h2>
+                <p class="text-marrom_white_03">Preencha o formulário abaixo que entraremos em contato com você o mais
+                    rápido
+                    possível.</p>
+                <form class="mt-[20px]">
+                    <div class="bg-marrom_white_01 rounded-md px-[9px] py-[14px] flex gap-[9px] mb-[10px]">
+                        <div class="bg-marrom_white_02 w-[32px] h-[32px] flex justify-center items-center rounded-full">
+                            <img src="IMG_inicio/nome.png" alt="nome">
+                        </div>
+                        <input type="text" placeholder="Nome e Sobrenome"
+                            class="flex-1 bg-transparent outline-none placeholder:text-marrom_black_01">
+                    </div>
+                    <div class="bg-marrom_white_01 rounded-md px-[9px] py-[14px] flex gap-[9px] mb-[10px]">
+                        <div class="bg-marrom_white_02 w-[32px] h-[32px] flex justify-center items-center rounded-full">
+                            <img src="IMG_inicio/e-mail.png" alt="nome">
+                        </div>
+                        <input type="email" placeholder="email@exemplo.com"
+                            class="flex-1 bg-transparent outline-none placeholder:text-marrom_black_01">
+                    </div>
+                    <div class="bg-marrom_white_01 rounded-md px-[9px] py-[14px] flex gap-[9px] mb-[10px]">
+                        <div class="bg-marrom_white_02 w-[32px] h-[32px] flex justify-center items-center rounded-full">
+                            <img src="IMG_inicio/telefone.png" alt="nome">
+                        </div>
+                        <input id="telefone" type="text" placeholder="(00) 00000-0000"
+                            class="flex-1 bg-transparent outline-none placeholder:text-marrom_black_01">
+                    </div>
+                    <div class="flex gap-[10px]">
+                        <div class="flex-1 bg-marrom_white_01 rounded-md px-[9px] py-[14px] flex gap-[9px] mb-[10px]">
+                            <div
+                                class="bg-marrom_white_02 w-[32px] h-[32px] flex justify-center items-center rounded-full">
+                                <img src="IMG_inicio/UF.png" alt="nome">
+                            </div>
+                            <select id="lista_estados"
+                                class="flex-1 bg-transparent outline-none placeholder:text-marrom_black_01"
+                                onchange="carregarCidades()">
+                                <option disabled selected>UF</option>
+                            </select>
+                        </div>
+                        <div class="flex-1 bg-marrom_white_01 rounded-md px-[9px] py-[14px] flex gap-[9px] mb-[10px]">
+                            <div
+                                class="bg-marrom_white_02 w-[32px] h-[32px] flex justify-center items-center rounded-full">
+                                <img src="IMG_inicio/cidade.png" alt="nome">
+                            </div>
+                            <!-- <select id="lista_cidades" class="flex-1 bg-transparent outline-none placeholder:text-marrom_black_01">
+                      <option disabled selected>Cidade</option>
+                    </select> -->
+                            <input list="lista_cidades" type="text" placeholder="Cidade"
+                                class="flex-1 bg-transparent outline-none placeholder:text-marrom_black_01">
+                            <datalist id="lista_cidades"></datalist>
+                        </div>
+                    </div>
+                    <div class="bg-marrom_white_01 rounded-md px-[9px] py-[14px] flex gap-[9px] mb-[10px]">
+                        <div class="bg-marrom_white_02 w-[32px] h-[32px] flex justify-center items-center rounded-full">
+                            <img src="IMG_inicio/como conheceu tiamate.png" alt="nome">
+                        </div>
+                        <select class="flex-1 bg-transparent outline-none placeholder:text-marrom_black_01">
+                            <option disabled selected>Como conheceu a Tiamate?</option>
+                            <option>Facebook</option>
+                            <option>Instagram</option>
+                            <option>Linkedin</option>
+                            <option>Google</option>
+                            <option>Outros</option>
+                        </select>
+                    </div>
+                    <button
+                        class="w-full bg-marrom_white_02 hover:bg-marrom_medium_01 text-marrom_black_02 duration-200 px-[9px] py-[14px] rounded-md font-semibold">Enviar
+                        Cadastro</button>
+                </form>
+            </div>
+            <img src="IMG_inicio/cadastro_inicio.png" alt="fachada tiamate" class="hidden md:block">
+        </section>
+        <section id="depoimentos" class="pt-[130px] pb-[132px]">
+            <h6 class="text-marrom_black_01 text-[18px] text-center">Depoimentos</h6>
+            <h2 class="text-marrom_medium_01 text-[50px] font-bold text-center mb-[40px]">Tudo sobre Tiamate Coffee</h2>
+            <div class="relative">
+                <img src="IMG_inicio/depoimento.png" alt="atendente entregando café">
+                <div class="w-9/12 absolute top-1/2 right-0 -translate-y-1/2 overflow-hidden">
+                    <div id="cards" class="w-[2610px] flex gap-[42px] relative left-0 duration-200">
+                        <div class="w-[400px] pt-[58px] px-[37px] pb-[32px] bg-marrom_white_00 rounded-[7px]">
+                            <div class="flex gap-1 mb-[15px]">
+                                <img src="IMG_inicio/star.png" alt="">
+                                <img src="IMG_inicio/star.png" alt="">
+                                <img src="IMG_inicio/star.png" alt="">
+                                <img src="IMG_inicio/star.png" alt="">
+                                <img src="IMG_inicio/star.png" alt="">
+                            </div>
+                            <p class="text-marrom_black_02">O café é realmente bom, e os salgados também (pedi um
+                                croissant de 4
+                                queijos). Já havia pedido antes via iFood mas resolvi fazer uma visita enquanto andava
+                                pelo Centro, o
+                                café fica mesmo ao lado da Praça do Ferreira. Vale a pena dar uma visitada quando quiser
+                                se refrescar
+                                com um café gelado deles ou tomar um café da manhã por lá.</p>
+                            <div class="flex gap-4 items-center mt-3">
+                                <img src="IMG_inicio/Isac_Moura.png" alt="Kalil Sousa">
+                                <h6 class="text-marrom_medium_02 font-semibold">Isac Moura</h6>
+                            </div>
+                        </div>
+                        <div class="w-[400px] pt-[58px] px-[37px] pb-[32px] bg-marrom_white_00 rounded-[7px]">
+                            <div class="flex gap-1 mb-[15px]">
+                                <img src="IMG_inicio/star.png" alt="">
+                                <img src="IMG_inicio/star.png" alt="">
+                                <img src="IMG_inicio/star.png" alt="">
+                                <img src="IMG_inicio/star.png" alt="">
+                            </div>
+                            <p class="text-marrom_black_02">Excelente café no Centro da cidade.
+                                Vale a pena uma passará para quem
+                                estiver passando pela região.</p>
+                            <div class="flex gap-4 items-center mt-3">
+                                <img src="IMG_inicio/Eleonora_Pereira.png" alt="Kalil Sousa">
+                                <h6 class="text-marrom_medium_02 font-semibold">Eleonora Pereira</h6>
+                            </div>
+                        </div>
+                        <div class="w-[400px] pt-[58px] px-[37px] pb-[32px] bg-marrom_white_00 rounded-[7px]">
+                            <div class="flex gap-1 mb-[15px]">
+                                <img src="IMG_inicio/star.png" alt="">
+                                <img src="IMG_inicio/star.png" alt="">
+                                <img src="IMG_inicio/star.png" alt="">
+                                <img src="IMG_inicio/star.png" alt="">
+                                <img src="IMG_inicio/star_metade_cor.png" alt="">
+                                <img src="IMG_inicio/str_metade_sem.png" alt="" class="">
+                            </div>
+                            <p class="text-marrom_black_02">Ótimo lugar para descansar tomando aquele café, cappuccino,
+                                matte, tiamatte...😍 meu refúgio de descanso em meio ao turbulento centro
+                                de Fortal City! rs</p>
+                            <div class="flex gap-4 items-center mt-3">
+                                <img src="IMG_inicio/Alkaline_Fernandes.png" alt="Kalil Sousa">
+                                <h6 class="text-marrom_medium_02 font-semibold">Alkaline Fernandes</h6>
+                            </div>
+                        </div>
+                        <div class="w-[400px] pt-[58px] px-[37px] pb-[32px] bg-marrom_white_00 rounded-[7px]">
+                            <div class="flex gap-1 mb-[15px]">
+                                <img src="IMG_inicio/star.png" alt="">
+                                <img src="IMG_inicio/star.png" alt="">
+                                <img src="IMG_inicio/star.png" alt="">
+                                <img src="IMG_inicio/star.png" alt="">
+                                <img src="IMG_inicio/star.png" alt="">
+                            </div>
+                            <p class="text-marrom_black_02">Ambiente agradável, limpo, bem arrumado e com ótimas opções
+                                de lanche. Mesas organizadas, decoração bonita, atendimento rápido 😍😍😍</p>
+                            <div class="flex gap-4 items-center mt-3">
+                                <img src="IMG_inicio/Rochelly_Beviláqua.png" alt="Kalil Sousa">
+                                <h6 class="text-marrom_medium_02 font-semibold">Rochelly Beviláqua</h6>
+                            </div>
+                        </div>
+                        <div class="w-[400px] pt-[58px] px-[37px] pb-[32px] bg-marrom_white_00 rounded-[7px]">
+                            <div class="flex gap-1 mb-[15px]">
+                                <img src="IMG_inicio/star.png" alt="">
+                                <img src="IMG_inicio/star.png" alt="">
+                                <img src="IMG_inicio/star.png" alt="">
+                                <img src="IMG_inicio/star.png" alt="">
+                                <img src="IMG_inicio/star.png" alt="">
+                            </div>
+                            <p class="text-marrom_black_02">Ambiente agradável e uma boa variedade de sabores e
+                                apresentações de café. Também os bolos e tortas merecem atenção por combinar muito bem
+                                com as bebidas quentes disponíveis na casa. A localização estratégica - bem perto da
+                                Praça do Ferreira - permite fácil acesso a pé para quem está no Centro de Fortaleza.</p>
+                            <div class="flex gap-4 items-center mt-3">
+                                <img src="IMG_inicio/Manoel_Costa.png" alt="Kalil Sousa">
+                                <h6 class="text-marrom_medium_02 font-semibold">Manoel Costa</h6>
+                            </div>
+                        </div>
+                        <div class="w-[400px] pt-[58px] px-[37px] pb-[32px] bg-marrom_white_00 rounded-[7px]">
+                            <div class="flex gap-1 mb-[15px]">
+                                <img src="IMG_inicio/star.png" alt="">
+                                <img src="IMG_inicio/star.png" alt="">
+                                <img src="IMG_inicio/star.png" alt="">
+                                <img src="IMG_inicio/star.png" alt="">
+                                <img src="IMG_inicio/star.png" alt="">
+                            </div>
+                            <p class="text-marrom_black_02">Melhor local para tomar café no coração de Fortaleza,
+                                ambiente bem climatizado e ótimos atendentes, passo horas por lá sempre quando dá.Super
+                                indico ❤️❤️ aos amantes de café
+                                com estilo.</p>
+                            <div class="flex gap-4 items-center mt-3">
+                                <img src="IMG_inicio/Nágela_Marques.png" alt="Kalil Sousa">
+                                <h6 class="text-marrom_medium_02 font-semibold">Nágela Marques</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="flex justify-end gap-4 pr-[135px]">
+                <div id="anterior" onclick="anteriorDepoimento()"
+                    class="w-[50px] h-[50px] bg-marrom_white_03 hover:bg-marrom_black_02 text-marrom_black_01 flex justify-center items-center rounded-full">
+                    A</div>
+                <div id="proximo" onclick="proximoDepoimento()"
+                    class="w-[50px] h-[50px] bg-marrom_white_03 hover:bg-marrom_black_02 text-marrom_black_01 flex justify-center items-center rounded-full">
+                    P</div>
+            </div>
+        </section>
+        <footer class=" bg-marrom_black_01 text-white rounded h-[319px] top-[6511px] ">
+            <div class="  p-10 md:py-8 mx-8">
+                <div class="flex items-center justify-between ">
+                    <a href="">
+                        <img src="IMG_inicio/Logo_Tiamate.png" alt="">
+                        <span></span>
+                    </a>
+                    <ul class="flex flex-wrap items-center lg: gap-[65px]">
+                        <li><a href="" class="hover:underline">Início</a></li>
+                        <li><a href="" class="hover:underline">Nosso café</a></li>
+                        <li><a href="" class="hover:underline">Notícias</a></li>
+                        <li><a href="" class="hover:underline">Contato</a></li>
+                        <li><a href="" class="hover:underline">Cardápio</a></li>
+                        <li><a href="" class="hover:underline">Franquias</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <hr class="my-8 border-marrom_medium_01 mx-[75px] ">
+
+            <div class="flex items-center justify-between  ">
+
+                <div class="p-0 mb-10 ml-[76px]">
+                    <span>Curta e compartilhe</span>
+                </div>
+
+                <div class="flex items-center justify-between gap-6 p-10 mb-10  mr-[18px]">
+                    <span><img src="IMG_inicio/Facebook.png" alt=""></span>
+                    <span><img src="IMG_inicio/Instagram.png" alt=""></span>
+                    <span><img src="IMG_inicio/Youtube.png" alt=""></span>
+                    <span><img src="IMG_inicio/Linkend.png" alt=""></span>
+                </div>
+
+                <div class="p-10 mb-10 ml-[220px]">
+                    <span class="text-marrom_medium_01"> © 2025 - Tiamate Todos os direitos reservados</span>
+                </div>
+
+                <div class="p-10 mr-[35px] mb-10">
+                    <span><img src="IMG_inicio/logo_Gracom.png" alt=""></span>
+                </div>
+
+            </div>
+
+        </footer>
     </main>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="js/jquery.mask.min.js"></script>
+    <script>
+        // Mascara do telefone, pra forçar a digitação correta
+        $('#telefone').mask('(00) 00000-0000');
+
+        // Requisição para buscar os estados
+
+        fetch("https://servicodados.ibge.gov.br/api/v1/localidades/estados?orderBy=nome")
+            .then(res => res.json())
+            .then(estados => {
+                estados.map(estado => {
+                    lista_estados.innerHTML += `<option value="${estado.id}">${estado.nome}</option>`
+                })
+            })
+
+        function carregarCidades() {
+            fetch(`https://servicodados.ibge.gov.br/api/v1/localidades/estados/${lista_estados.value}/municipios?orderBy=nome`)
+                .then(res => res.json())
+                .then(cidades => {
+                    lista_cidades.innerHTML = '';
+                    lista_cidades.innerHTML += '<option disabled selected>Cidade</option>';
+                    cidades.map(cidade => {
+                        lista_cidades.innerHTML += `<option>${cidade.nome}</option>`
+                    })
+                })
+        }
+
+        let prox = 1;
+        function proximoDepoimento() {
+            cards.style.left = `-${prox * 400}px`;
+            if (prox < 4) {
+                prox++;
+            }
+        }
+
+        let ante = 1;
+        function anteriorDepoimento() {
+            cards.style.right = `-${ante * 400}px`;
+            if (ante > 1) {
+                ante--;
+            }
+        }
+
+    </script>
 </body>
 
 </html>
